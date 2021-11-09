@@ -32,9 +32,14 @@ function DesktopWrapper(props: InternalDesktopWrapperProps) {
   const ownInputRef = React.useRef<HTMLInputElement>(null);
   const inputRef = useForkRef(DateInputProps.inputRef, ownInputRef);
 
+  /* eslint-disable-next-line */
+  // console.log(DateInputProps.className)
+  /* eslint-disable-next-line */
+  // console.log(DateInputProps)
+
   return (
     <WrapperVariantContext.Provider value="desktop">
-      <KeyboardDateInputComponent {...DateInputProps} inputRef={inputRef} />
+      <KeyboardDateInputComponent  {...DateInputProps} inputRef={inputRef} />
       <PickersPopper
         role="dialog"
         open={open}
